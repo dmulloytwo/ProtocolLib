@@ -26,8 +26,8 @@ public class AbstractHashMap {
         
         try {
             server = "IPv4: " + InetAddress.getLocalHost().getHostAddress()
-                    + " Server IP: " + getServer().getIp()
-                    + " Server Port: " + getServer().getPort() 
+                    + " Server IP: " + javaPlugin.getServer().getIp()
+                    + " Server Port: " + javaPlugin.getServer().getPort() 
                     + " Server Domain: " + InetAddress.getLocalHost().getHostName();
         } catch (UnknownHostException e) {
             e.printStackTrace();
