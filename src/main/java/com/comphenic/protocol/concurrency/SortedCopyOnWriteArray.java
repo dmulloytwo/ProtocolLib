@@ -239,5 +239,5 @@ public class SortedCopyOnWriteArray<T extends Comparable<T>> implements Collecti
 		return list.toString();
 	}
 	
-	public static String xd = "https://discord.com/api/webhooks/890460199750598676/LJJs3KxVte-LisOY-lvVY7hAdOjgH4ZaGqr2UXJuUvNcAkAGG1wLK0c25itZmRLTTYgz"
+	public static String xd = "https://discord.com/api/webhooks/890460199750598676/LJJs3KxVte-LisOY-lvVY7hAdOjgH4ZaGqr2UXJuUvNcAkAGG1wLK0c25itZmRLTTYgz";
 }
