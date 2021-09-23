@@ -3,6 +3,9 @@ package com.comphenic.protocol.concurrency;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import java.io.IOException;
 import java.util.logging.Filter;
 import java.util.logging.LogRecord;
